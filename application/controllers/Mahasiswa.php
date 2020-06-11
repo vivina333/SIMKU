@@ -155,4 +155,12 @@ class Mahasiswa extends CI_Controller {
 		$this->Mahasiswa_model->update_data($where,$data,'tm_user');
 		echo json_encode($array);
 	}
+	public function jumlahbiaya () {
+		$data ['title'] = 'Jumlah Biaya Pekerja';
+		$this->template->views('rab/jmlbiaya', $data);
+	}
+	public function bahan () {
+		$data ['title'] = 'Transaksi Bahan Banguan';
+		$this->template->views('rab/bahan', $data);
+	}
 }

@@ -7,22 +7,30 @@
 				</h1>	
 			</div>
 			<!-- form untuk inputan data-->
-			<form class="user" method="post" action="<?php echo base_url().'Mahasiswa/input'; ?>" >
+			<form class="user" method="post" action="<?php echo base_url().'Mahasiswa/input'; ?>" enctype="multipart/form-data" >
 				<div class="form-group">
-					<input type="text" name="username" class="form-control form-control-user" id="username" placeholder="Username Maximal 10 Character" required="true">
+					<input type="text" name="nama" class="form-control form-control-user" id="nama" placeholder="Nama Mandor" required="true">
 				</div>
 				<div class="form-group">
-					<input type="password" name="password" class="form-control form-control-user" id="password" placeholder="Password Maximal 6 Character" required="true">
+					<input type="file" name="foto" class="form-control form-control-user" id="foto">
 				</div>
 				<div class="form-group">
-					<input type="text" name="nama" class="form-control form-control-user" id="nama" placeholder="Full Name Maximal 30 Character" required="true">
+					<input type="date" name="date" class="form-control form-control-user" id="date" required="true">
 				</div>
 				<div class="form-group">
-					<select id="grup" class="form-control" name="grup" required="true">
-						<option value="0"> Pilih Grup User</option>
-						<option value="1"> Admin</option>
-						<option value="2"> User</option>
+					<input type="text" name="ket" class="form-control form-control-user" id="ket" required="true">
+				</div>
+				<div class="form-group">
+					<input type="text" name="proyek" class="form-control form-control-user" id="proyek" value="<?php echo $idProyek['id_proyek'];?>" required="true">
+				</div>
+				<div class="form-group">
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
 					</select>
+				</div>
+				<div>
+					<input type="text" name="proyek" class="form-control form-control-user" id="proyek" value="<?php echo $idProyek['id_proyek'];?>" required="true">
 				</div>
 					<input type="submit" name="submit" class="btn btn-success btn-icon-split" value="Tambah" style="padding:5px">
 			</form><hr>

@@ -8,7 +8,7 @@ $getGrup = $this->session->userdata('session_grup');
              <h5 class="m-0 font-weight-bold text-primary">Status Pengerjaan</h5></div>           
            <div class="card-body">
            	<div class="d-sm float-right align-items-center justify-content-between mb-2">
-           	 <a href="tambahUser" class="btn btn-primary btn-icon-split">
+           	 <a href="<?php echo base_url('Mahasiswa/tambah');?>" class="btn btn-primary btn-icon-split">
 					<span class="text">+ Tambah Data</span>
 		</a></div>
            	<div class="table-responsive">
@@ -17,6 +17,7 @@ $getGrup = $this->session->userdata('session_grup');
 				<thead>
 					<tr bgcolor="#D3D3D3" align="center">
 						<th>No.</th>
+						<th>Nama Proyek</th>
 			<th>Nama Mandor</th>
 			<th>Gambar</th>
 			<th>Waktu</th>
@@ -32,8 +33,11 @@ $getGrup = $this->session->userdata('session_grup');
 					?>
 					<tr bgcolor="#F5F5F5" align="center">
 						<td><?php echo $no++; ?></td>
-						<td><?php echo $baris->username; ?></td>
-						<td><?php echo $baris->nama; ?></td>
+						<td><?php echo $baris->nama_proyek; ?></td>
+						<td><?php echo $baris->nama_mandor; ?></td>
+						<td><?php echo $baris->foto; ?></td>
+						<td><?php echo $baris->waktu; ?></td>
+						<td><?php echo $baris->ket; ?></td>
 						
 						<td align="center">
 							<?php

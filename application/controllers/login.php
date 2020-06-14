@@ -13,8 +13,8 @@ class login extends CI_Controller
 
 	public function cek_log(){	
 		$username = $this->input->post('txt_user');
-		$password = $this->input->post('txt_pass');
-		$cek = $this->Mahasiswa_model->login($username,$password,'tb_login')->result();
+		$PASSWORD = $this->input->post('txt_pass');
+		$cek = $this->Mahasiswa_model->login($username,$PASSWORD,'tb_login')->result();
 		if ($cek != FALSE) {
 			foreach ($cek as $row) {
 				$level = $row->username;

@@ -23,7 +23,7 @@ $getUser = $this->session->userdata('session_user');
 						<td><?php echo $no++; ?></td>
 						<td><?php echo $baris->nama_proyek; ?></td>
 						<td><?php echo $baris->nama_mandor; ?></td>
-						<td></td>
+						
 						
 					</tr>
 					<?php 
